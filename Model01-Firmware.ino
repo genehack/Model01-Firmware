@@ -59,6 +59,7 @@
 // space cadet
 #include <Kaleidoscope-SpaceCadet.h>
 #include <Kaleidoscope-DualUse.h>
+#include <Kaleidoscope-ModRight.h>
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
   * The names aren't particularly important. What is important is that each
@@ -265,7 +266,13 @@ static kaleidoscope::LEDSolidColor solidViolet(130, 0, 120);
 
 void setup() {
   //Tell Kaleidoscope to use SpaceCadet
-  Kaleidoscope.use(&SpaceCadet, &DualUse);
+  Kaleidoscope.use(&ModRight, &SpaceCadet, &DualUse);
+
+  static const Key require_right[] PROGMEM = { Key_A, Key_NoKey };
+  static const Key require_left[] PROGMEM  = { Key_M, Key_NoKey };
+
+  ModRight.require_left = require_left;
+  ModRight.require_right = require_right;
 
   //Set the SpaceCadet map
   //Setting is {KeyThatWasPressed, AlternativeKeyToSend, TimeoutInMS}
