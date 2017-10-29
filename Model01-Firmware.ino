@@ -56,6 +56,8 @@
 // Support for Keyboardio's internal keyboard testing mode
 #include "Kaleidoscope-Model01-TestMode.h"
 
+// space cadet
+#include <Kaleidoscope-SpaceCadet.h>
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
   * The names aren't particularly important. What is important is that each
@@ -261,6 +263,29 @@ static kaleidoscope::LEDSolidColor solidViolet(130, 0, 120);
   */
 
 void setup() {
+  //Tell Kaleidoscope to use SpaceCadet
+  Kaleidoscope.use(&SpaceCadet);
+
+  //Set the SpaceCadet map
+  //Setting is {KeyThatWasPressed, AlternativeKeyToSend, TimeoutInMS}
+  //Note: must end with the SPACECADET_MAP_END delimiter
+  static kaleidoscope::SpaceCadet::KeyBinding spacecadetmap[] =
+    {
+     // left thumb arc (left to right)
+     {Key_LeftControl,  Key_LeftCurlyBracket,  250},
+     {Key_LeftGui,      Key_LeftBracket,       250},
+     {Key_LeftShift,    Key_LeftParen,         250},
+
+     // right thumb arc (left to right)
+     {Key_RightShift,   Key_RightParen,        250},
+     {Key_RightAlt,     Key_RightBracket,      250},
+     {Key_RightControl, Key_RightCurlyBracket, 250},
+
+     SPACECADET_MAP_END
+  };
+  //Set the map.
+  SpaceCadet.map = spacecadetmap;
+
   // First, call Kaleidoscope's internal setup function
   Kaleidoscope.setup();
 
