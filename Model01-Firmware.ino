@@ -132,13 +132,13 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   (___,             Key_1,           Key_2,       Key_3,         Key_4, Key_5,     Key_LEDEffectNext, // R1
    Key_Tab,         Key_Quote,       Key_Comma,   Key_Period,    Key_P, Key_Y,     Key_Backtick,      // R2
    Key_LeftControl, Key_A,           Key_O,       Key_E,         Key_U, Key_I,                        // R3
-   Key_PageDown,    Key_Semicolon,   Key_Q,       Key_J,         Key_K, Key_X,     Key_Escape,        // R4
+   XXX,             Key_Semicolon,   Key_Q,       Key_J,         Key_K, Key_X,     Key_Escape,        // R4
 
    Key_Backspace,   Key_LeftControl, Key_LeftGui, Key_LeftShift,                                      // arc
    LT(FUNCTION, Spacebar),
 
-   M(MACRO_ANY),    Key_6,           Key_7,       Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
-   Key_Enter,       Key_F,           Key_G,       Key_C,         Key_R, Key_L,     Key_Slash,         // R2
+   Key_PageUp,      Key_6,           Key_7,       Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
+   Key_PageDown,    Key_F,           Key_G,       Key_C,         Key_R, Key_L,     Key_Slash,         // R2
    Key_D,           Key_H,           Key_T,       Key_N,         Key_S, Key_Minus,                    // R3
    Key_RightAlt,    Key_B,           Key_M,       Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
 
