@@ -131,15 +131,15 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftControl, Key_A,         Key_O,     Key_E,      Key_U, Key_I,                    // R3
    Key_PageDown,    Key_Semicolon, Key_Q,     Key_J,      Key_K, Key_X, Key_Escape,        // R4
 
-   Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,                             // arc
    ShiftToLayer(FUNCTION),
+   Key_Spacebar, Key_LeftControl, Key_LeftGui, Key_LeftShift,                              // arc
 
    M(MACRO_ANY),   Key_6, Key_7, Key_8, Key_9,     Key_0, Key_KeypadNumLock,               // R1
    Key_Enter,      Key_F, Key_G, Key_C, Key_R,     Key_L, Key_Slash,                       // R2
    Key_D, Key_H,   Key_T, Key_N, Key_S, Key_Minus,                                         // R3
    Key_RightAlt,   Key_B, Key_M, Key_W, Key_V,     Key_Z, Key_Equals,                      // R4
 
-   Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,                            // arc
+   Key_RightShift, Key_LeftAlt, Key_RightControl, Key_Spacebar,                            // arc
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
