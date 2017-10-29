@@ -140,7 +140,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_PageUp,      Key_6,           Key_7,       Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
    Key_PageDown,    Key_F,           Key_G,       Key_C,         Key_R, Key_L,     Key_Slash,         // R2
    Key_D,           Key_H,           Key_T,       Key_N,         Key_S, Key_Minus,                    // R3
-   Key_RightAlt,    Key_B,           Key_M,       Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
+   Key_Enter,       Key_B,           Key_M,       Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
 
    Key_RightShift, Key_RightAlt, Key_RightControl, Key_Backspace,                                     // arc
    LT(FUNCTION, Enter)),
