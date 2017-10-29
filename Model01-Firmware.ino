@@ -358,12 +358,13 @@ void setup() {
   // called 'BlazingTrail'. For details on other options,
   // see https://github.com/keyboardio/Kaleidoscope-LED-Stalker
   // StalkerEffect.variant = STALKER(BlazingTrail);
-  StalkerEffect.variant = Haunt();
+  StalkerEffect.variant = STALKER(Haunt, (CRGB(255, 255, 255)));
 
   // We want to make sure that the firmware starts with LED effects off
   // This avoids over-taxing devices that don't have a lot of power to share
   // with USB devices
   // LEDOff.activate();
+  StalkerEffect.activate();
 }
 
 /** loop is the second of the standard Arduino sketch functions.
