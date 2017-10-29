@@ -142,7 +142,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_D,           Key_H,           Key_T,       Key_N,         Key_S, Key_Minus,                    // R3
    Key_RightAlt,    Key_B,           Key_M,       Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
 
-   Key_RightShift, Key_LeftAlt, Key_RightControl, Key_Backspace,                                      // arc
+   Key_RightShift, Key_RightAlt, Key_RightControl, Key_Backspace,                                     // arc
    LT(FUNCTION, Enter)),
 
   [FUNCTION] =  KEYMAP_STACKED
