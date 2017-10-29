@@ -135,7 +135,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_PageDown,    Key_Semicolon, Key_Q,     Key_J,      Key_K, Key_X, Key_Escape,        // R4
 
    Key_Spacebar, Key_LeftControl, Key_LeftGui, Key_LeftShift,                              // arc
-   LT(FUNCTION, Key_Backspace),
+   LT(FUNCTION, Backspace),
 
    M(MACRO_ANY),   Key_6, Key_7, Key_8, Key_9,     Key_0, Key_KeypadNumLock,               // R1
    Key_Enter,      Key_F, Key_G, Key_C, Key_R,     Key_L, Key_Slash,                       // R2
@@ -144,7 +144,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
 
    Key_RightShift, Key_LeftAlt, Key_RightControl, Key_Spacebar,                            // arc
-   LT(FUNCTION, Key_Enter))
+   LT(FUNCTION, Enter)),
 
   [FUNCTION] =  KEYMAP_STACKED
   (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,             // R1
