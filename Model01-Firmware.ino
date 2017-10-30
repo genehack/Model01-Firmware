@@ -130,21 +130,21 @@ enum { DVORAK, FUNCTION, NUMPAD }; // layers
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [DVORAK] = KEYMAP_STACKED
-  (___,             Key_1,           Key_2,       Key_3,         Key_4, Key_5,     Key_LEDEffectNext, // R1
-   Key_Tab,         Key_Quote,       Key_Comma,   Key_Period,    Key_P, Key_Y,     Key_Backtick,      // R2
-   Key_LeftControl, Key_A,           Key_O,       Key_E,         Key_U, Key_I,                        // R3
-   XXX,             Key_Semicolon,   Key_Q,       Key_J,         Key_K, Key_X,     Key_Escape,        // R4
+  (___,             Key_1,           Key_2,         Key_3,         Key_4, Key_5,     Key_LEDEffectNext, // R1
+   Key_Backtick,    Key_Quote,       Key_Comma,     Key_Period,    Key_P, Key_Y,     Key_Tab,           // R2
+   Key_PageUp,      Key_A,           Key_O,         Key_E,         Key_U, Key_I,                        // R3
+   Key_PageDown,    Key_Semicolon,   Key_Q,         Key_J,         Key_K, Key_X,     Key_Escape,        // R4
 
-   Key_Backspace,   Key_LeftControl, Key_LeftGui, Key_LeftShift,                                      // arc
-   LT(FUNCTION, Spacebar),
+   Key_LeftShift,   Key_LeftControl, Key_LeftGui,   Key_Backspace,                                      // arc
+   ShiftToLayer(FUNCTION),
 
-   Key_PageUp,      Key_6,           Key_7,       Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
-   Key_PageDown,    Key_F,           Key_G,       Key_C,         Key_R, Key_L,     Key_Slash,         // R2
-   Key_D,           Key_H,           Key_T,       Key_N,         Key_S, Key_Minus,                    // R3
-   Key_Enter,       Key_B,           Key_M,       Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
+   M(MACRO_ANY),    Key_6,            Key_7,        Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
+   Key_Enter,       Key_F,            Key_G,        Key_C,         Key_R, Key_L,     Key_Slash,         // R2
+                    Key_D,            Key_H,        Key_T,         Key_N, Key_S,     Key_Minus,         // R3
+   Key_Enter,       Key_B,            Key_M,        Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
 
-   Key_RightShift, Key_RightAlt, Key_RightControl, Key_Backspace,                                     // arc
-   LT(FUNCTION, Enter)),
+   Key_Spacebar,    Key_RightControl, Key_RightAlt, Key_RightShift,                                     // arc
+   ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
   (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,             // R1
@@ -152,7 +152,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Home, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,                   // R3
    Key_End,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, // R4
 
-   ___, Key_Delete, ___, ___,                                                                             // arc
+   ___, ___, ___, Key_Delete,                                                                             // arc
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,  // R1
@@ -160,7 +160,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftArrow,              Key_DownArrow,          Key_UpArrow,              Key_RightArrow,           ___,             ___,                        // R3
    Key_PcApplication,          Key_Mute,               Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe, // R4
 
-   ___, ___, Key_Enter, ___,                                                                                                                            // arc
+   Key_Enter, ___, ___, ___,                                                                                                                            // arc
    ___),
 
 
