@@ -316,7 +316,7 @@ void setup() {
 
     // The rainbow effect changes the color of all of the keyboard's keys at the same time
     // running through all the colors of the rainbow.
-    // &LEDRainbowEffect,
+    &LEDRainbowEffect,
 
     // The rainbow wave effect lights up your keyboard with all the colors of a rainbow
     // and slowly moves the rainbow across your keyboard
@@ -355,7 +355,7 @@ void setup() {
   NumLock.numPadLayer = NUMPAD;
 
   // We configure the AlphaSquare effect to use BLUE letters
-  AlphaSquare.color = { 0, 0, 255 };
+  // AlphaSquare.color = { 0, 0, 255 };
 
   // We set the brightness of the rainbow effects to 150 (on a scale of 0-255)
   // This draws more than 500mA, but looks much nicer than a dimmer effect
@@ -366,7 +366,7 @@ void setup() {
   // called 'BlazingTrail'. For details on other options,
   // see https://github.com/keyboardio/Kaleidoscope-LED-Stalker
   // StalkerEffect.variant = STALKER(BlazingTrail);
-  StalkerEffect.variant = STALKER(Haunt, (CRGB(255, 255, 255)));
+  StalkerEffect.variant = STALKER(BlazingTrail);
 
   // We want to make sure that the firmware starts with LED effects off
   // This avoids over-taxing devices that don't have a lot of power to share
