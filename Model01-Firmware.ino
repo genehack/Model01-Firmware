@@ -268,6 +268,7 @@ void setup() {
   //Tell Kaleidoscope to use SpaceCadet
   Kaleidoscope.use(&ModRight, &SpaceCadet, &DualUse);
 
+  // FIXME
   static const Key require_right[] PROGMEM = { Key_A, Key_NoKey };
   static const Key require_left[] PROGMEM  = { Key_M, Key_NoKey };
 
