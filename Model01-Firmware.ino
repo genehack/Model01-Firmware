@@ -26,7 +26,7 @@
 #include "Kaleidoscope-LEDControl.h"
 
 // Support for "Numlock" mode, which is mostly just the Numlock specific LED mode
-#include "Kaleidoscope-Numlock.h"
+// #include "Kaleidoscope-Numlock.h"
 
 // Support for an "LED off mode"
 #include "LED-Off.h"
@@ -355,7 +355,7 @@ void setup() {
 
     // The numlock plugin is responsible for lighting up the 'numpad' mode
     // with a custom LED effect
-    &NumLock,
+    // &NumLock,
 
     // The macros plugin adds support for macros
     &Macros,
@@ -366,7 +366,7 @@ void setup() {
 
   // While we hope to improve this in the future, the NumLock plugin
   // needs to be explicitly told which keymap layer is your numpad layer
-  NumLock.numPadLayer = NUMPAD;
+  // NumLock.numPadLayer = NUMPAD;
 
   // We configure the AlphaSquare effect to use BLUE letters
   // AlphaSquare.color = { 0, 0, 255 };
