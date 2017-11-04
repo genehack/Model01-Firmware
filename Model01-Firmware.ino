@@ -56,6 +56,9 @@
 // Support for Keyboardio's internal keyboard testing mode
 #include "Kaleidoscope-Model01-TestMode.h"
 
+// Support for Matrix-like "falling rain" effect
+#include <Kaleidoscope-LEDEffect-DigitalRain.h>
+
 // space cadet
 #include <Kaleidoscope-SpaceCadet.h>
 #include <Kaleidoscope-DualUse.h>
@@ -352,6 +355,9 @@ void setup() {
 
     // The stalker effect lights up the keys you've pressed recently
     &StalkerEffect,
+
+    // make it rain!
+    &LEDDigitalRainEffect,
 
     // The numlock plugin is responsible for lighting up the 'numpad' mode
     // with a custom LED effect
