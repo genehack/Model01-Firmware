@@ -138,7 +138,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    XXX,             Key_A,           Key_O,             Key_E,         Key_U, Key_I,                        // R3
    XXX,             Key_Semicolon,   Key_Q,             Key_J,         Key_K, Key_X,     Key_Escape,        // R4
 
-   Key_LeftShift,   Key_LeftControl, Key_LeftGui,       Key_Backspace,                                      // arc
+   Key_LeftShift,   Key_LeftGui,     Key_LeftControl,   Key_Backspace,                                      // arc
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY),    Key_6,            Key_7,            Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
@@ -146,7 +146,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
                     Key_D,            Key_H,            Key_T,         Key_N, Key_S,     Key_Minus,         // R3
    Key_Enter,       Key_B,            Key_M,            Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
 
-   Key_Spacebar,    Key_RightAlt,     Key_RightControl, Key_RightShift,                                     // arc
+   Key_Spacebar,    Key_RightAlt,     Key_RightGui,     Key_RightShift,                                     // arc
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
@@ -299,12 +299,12 @@ void setup() {
     {
      // left thumb arc (left to right)
      {Key_LeftShift,    Key_LeftParen,         250},
-     {Key_LeftControl,  Key_LeftBracket,       250},
-     {Key_LeftGui,      Key_LeftCurlyBracket,  250},
+     {Key_LeftGui,      Key_LeftBracket,       250},
+     {Key_LeftControl,  Key_LeftCurlyBracket,  250},
 
      // right thumb arc (left to right)
      {Key_RightAlt,     Key_RightCurlyBracket, 250},
-     {Key_RightControl, Key_RightBracket,      250},
+     {Key_RightGui,     Key_RightBracket,      250},
      {Key_RightShift,   Key_RightParen,        250},
 
      SPACECADET_MAP_END
