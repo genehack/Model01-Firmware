@@ -150,10 +150,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,        Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,             // R1
-   Key_Tab,    ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, // R2
-   Key_Home,   Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,                   // R3
-   Key_End,    Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, // R4
+  (___,        Key_F1,           Key_F2,        Key_F3,         Key_F4,        Key_F5,           XXX,             // R1
+   Key_Tab,    ___,              Key_UpArrow,   ___,            Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, // R2
+   Key_Home,   Key_LeftArrow,    Key_DownArrow, Key_RightArrow, Key_mouseBtnL, Key_mouseWarpNW,                   // R3
+   Key_End,    Key_PrintScreen,  Key_Insert,    ___,            Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, // R4
 
    Key_PageUp, ___,              ___,         Key_Delete,                                                   // arc
    ___,
