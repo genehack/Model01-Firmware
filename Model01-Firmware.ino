@@ -121,6 +121,7 @@ enum {
   * The third one is layer 2.
   * This 'enum' lets us use names like QWERTY, FUNCTION, and NUMPAD in place of
   * the numbers 0, 1 and 2.
+  *
   */
 
 enum { DVORAK, FUNCTION, NUMPAD }; // layers
@@ -166,7 +167,6 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Enter, ___, ___, Key_PageDown,                                                                                                                   // arc
    ___),
 
-
   [NUMPAD] =  KEYMAP_STACKED
   (___, ___, ___, ___, ___, ___, ___, // R1
    ___, ___, ___, ___, ___, ___, ___, // R2
@@ -182,7 +182,9 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,                    ___,         Key_Keypad0, Key_KeypadDot, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter, // R4
 
    ___, ___, ___, ___,                                                                                                 // arc
+
    ___)
+
 };
 
 /* Re-enable astyle's indent enforcement */
@@ -370,7 +372,7 @@ void setup() {
     &MouseKeys
   );
 
-  // While we hope to improve this in the future, the NumLock plugin
+  // While we hope to improve this in the future, the NumPad plugin
   // needs to be explicitly told which keymap layer is your numpad layer
   // NumLock.numPadLayer = NUMPAD;
 
