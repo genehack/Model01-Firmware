@@ -17,7 +17,7 @@
 #include "Kaleidoscope.h"
 
 // Support for keys that move the mouse
-#include "Kaleidoscope-MouseKeys.h"
+// #include "Kaleidoscope-MouseKeys.h"
 
 // Support for macros
 #include "Kaleidoscope-Macros.h"
@@ -137,29 +137,29 @@ enum { DVORAK, FUNCTION, NUMPAD }; // layers
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [DVORAK] = KEYMAP_STACKED
-  (___,             Key_1,           Key_2,             Key_3,         Key_4, Key_5,     Key_LEDEffectNext, // R1
+  (___,             Key_1,           Key_2,             Key_3,         Key_4, Key_5,     Key_Backspace,     // R1
    Key_Backtick,    Key_Quote,       Key_Comma,         Key_Period,    Key_P, Key_Y,     Key_Tab,           // R2
-   XXX,             Key_A,           Key_O,             Key_E,         Key_U, Key_I,                        // R3
-   XXX,             Key_Semicolon,   Key_Q,             Key_J,         Key_K, Key_X,     Key_Escape,        // R4
+   Key_PageUp,      Key_A,           Key_O,             Key_E,         Key_U, Key_I,                        // R3
+   Key_PageDown,    Key_Semicolon,   Key_Q,             Key_J,         Key_K, Key_X,     Key_Escape,        // R4
 
-   Key_LeftShift,   Key_LeftGui,     Key_LeftControl,   Key_Backspace,                                      // arc
+   Key_LeftShift,   Key_LeftGui,     Key_LeftControl,   Key_LeftAlt,                                        // arc
    ShiftToLayer(FUNCTION),
 
-   M(MACRO_ANY),    Key_6,            Key_7,            Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
+   Key_Spacebar,    Key_6,            Key_7,            Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
    Key_Enter,       Key_F,            Key_G,            Key_C,         Key_R, Key_L,     Key_Slash,         // R2
                     Key_D,            Key_H,            Key_T,         Key_N, Key_S,     Key_Minus,         // R3
    Key_Enter,       Key_B,            Key_M,            Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
 
-   Key_Spacebar,    Key_RightAlt,     Key_RightGui,     Key_RightShift,                                     // arc
+   Key_RightAlt,    Key_RightControl, Key_RightGui,     Key_RightShift,                                     // arc
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,        Key_F1,           Key_F2,        Key_F3,         Key_F4,        Key_F5,           XXX,             // R1
-   Key_Tab,    ___,              Key_UpArrow,   ___,            Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, // R2
-   Key_Home,   Key_LeftArrow,    Key_DownArrow, Key_RightArrow, Key_mouseBtnL, Key_mouseWarpNW,                   // R3
-   Key_End,    Key_PrintScreen,  Key_Insert,    ___,            Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, // R4
+  (___,        Key_F1,           Key_F2,        Key_F3,         Key_F4,         Key_F5, Key_LEDEffectNext,  // R1
+   Key_Tab,    ___,              ___,           Key_UpArrow,    ___,            ___,    ___,                // R2
+   Key_Home,   ___,              Key_LeftArrow, Key_DownArrow,  Key_RightArrow, ___,                        // R3
+   Key_End,    Key_PrintScreen,  Key_Insert,    ___,            ___,            ___,    ___,                // R4
 
-   Key_PageUp, ___,              ___,         Key_Delete,                                                   // arc
+   ___,        ___,              ___,         Key_Delete,                                                   // arc
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,  // R1
@@ -167,7 +167,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftArrow,              Key_DownArrow,          Key_UpArrow,              Key_RightArrow,           ___,             ___,                        // R3
    Key_PcApplication,          Key_Mute,               Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe, // R4
 
-   Key_Enter, ___, ___, Key_PageDown,                                                                                                                   // arc
+   Key_Enter, ___, ___, ___,                                                                                                                            // arc
    ___),
 
   [NUMPAD] =  KEYMAP_STACKED
@@ -331,9 +331,11 @@ void setup() {
      {Key_LeftShift,    Key_LeftParen,         250},
      {Key_LeftGui,      Key_LeftBracket,       250},
      {Key_LeftControl,  Key_LeftCurlyBracket,  250},
+     {Key_LeftAlt,      Key_Backspace,         150},
 
      // right thumb arc (left to right)
-     {Key_RightAlt,     Key_RightCurlyBracket, 250},
+     {Key_RightAlt,     Key_Spacebar,          150},
+     {Key_RightControl, Key_RightCurlyBracket, 250},
      {Key_RightGui,     Key_RightBracket,      250},
      {Key_RightShift,   Key_RightParen,        250},
 
@@ -397,7 +399,7 @@ void setup() {
     &Macros,
 
     // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
-    &MouseKeys,
+    //&MouseKeys,
 
     // The HostPowerManagement plugin enables waking up the host from suspend,
     // and allows us to turn LEDs off when it goes to sleep.
