@@ -142,7 +142,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_PageUp,      Key_A,           Key_O,             Key_E,         Key_U, Key_I,                        // R3
    Key_PageDown,    Key_Semicolon,   Key_Q,             Key_J,         Key_K, Key_X,     Key_LeftAlt,       // R4
 
-   Key_LeftShift,   Key_LeftGui,     Key_LeftControl,   Key_LeftAlt,                                        // arc
+   Key_LeftShift,   Key_LeftGui,     Key_LeftControl,   Key_Backspace,                                      // arc
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY),    Key_6,            Key_7,            Key_8,         Key_9, Key_0,     Key_KeypadNumLock, // R1
@@ -150,7 +150,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
                     Key_D,            Key_H,            Key_T,         Key_N, Key_S,     Key_Minus,         // R3
    Key_RightAlt,    Key_B,            Key_M,            Key_W,         Key_V, Key_Z,     Key_Equals,        // R4
 
-   Key_RightAlt,    Key_RightControl, Key_RightGui,     Key_RightShift,                                     // arc
+   Key_Spacebar,    Key_RightControl, Key_RightGui,     Key_RightShift,                                     // arc
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
@@ -163,9 +163,9 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,  // R1
-   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,  // R2
+   Consumer_PlaySlashPause,    Key_PcApplication,      Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,  // R2
    Key_LeftArrow,              Key_DownArrow,          Key_UpArrow,              Key_RightArrow,           ___,             ___,                        // R3
-   Key_PcApplication,          Key_Mute,               Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe, // R4
+   Consumer_ScanNextTrack,     Key_Mute,               Consumer_VolumeDecrement, Consumer_VolumeIncrement, XXX,             Key_Backslash,    Key_Pipe, // R4
 
    Key_Enter, ___, ___, ___,                                                                                                                            // arc
    ___),
