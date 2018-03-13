@@ -159,7 +159,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_Home,   ___,              Key_LeftArrow, Key_DownArrow,  Key_RightArrow, ___,                        // R3
    Key_End,    Key_PrintScreen,  Key_Insert,    ___,            ___,            ___,    ___,                // R4
 
-   ___,        ___,              ___,         Key_Delete,                                                   // arc
+   Key_CapsLock, ___,              ___,         Key_Delete,                                                   // arc
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,  // R1
@@ -167,7 +167,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftArrow,              Key_DownArrow,          Key_UpArrow,              Key_RightArrow,           ___,             ___,                        // R3
    Consumer_ScanNextTrack,     Key_Mute,               Consumer_VolumeDecrement, Consumer_VolumeIncrement, XXX,             Key_Backslash,    Key_Pipe, // R4
 
-   Key_Enter, ___, ___, ___,                                                                                                                            // arc
+   Key_Enter, ___, ___, Key_CapsLock,                                                                                                                   // arc
    ___),
 
   [NUMPAD] =  KEYMAP_STACKED
