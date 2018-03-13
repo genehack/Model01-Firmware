@@ -154,10 +154,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,        Key_F1,           Key_F2,        Key_F3,         Key_F4,         Key_F5, Key_LEDEffectNext,  // R1
-   Key_Tab,    ___,              ___,           Key_UpArrow,    ___,            ___,    ___,                // R2
-   Key_Home,   ___,              Key_LeftArrow, Key_DownArrow,  Key_RightArrow, ___,                        // R3
-   Key_End,    Key_PrintScreen,  Key_Insert,    ___,            ___,            ___,    ___,                // R4
+  (___,          Key_F1,           Key_F2,        Key_F3,         Key_F4,         Key_F5, Key_LEDEffectNext,  // R1
+   Key_Tab,      XXX,              XXX,           Key_UpArrow,    XXX,            ___,    ___,                // R2
+   Key_Home,     XXX,              Key_LeftArrow, Key_DownArrow,  Key_RightArrow, ___,                        // R3
+   Key_End,      XXX,              XXX,           XXX,            XXX,            ___,    ___,                // R4
 
    Key_CapsLock, ___,              ___,         Key_Delete,                                                   // arc
    ___,
